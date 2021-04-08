@@ -1,8 +1,0 @@
-Nama 		: Yunza Jauhari
-NPM 		: 1908107010066
-Cita - cita	: ingin menjadi seorang Data Analyst. Pekerjaan ini berhubungan
-		 dengan segala jenis data dan bertanggung jawab untuk menerjamhkan data
-		 sehingga data dapat diolah dan dijadikan laporan untuk membantu proses
-		 manajemen dan pengelohan data perusahan. Data Analyst juga dapat dikatakan
-		 sebagai orang bertugas untuk menganalisis data untuk meingkatkan keuntungan dan
-		 kredibilitas suatu perusahaan.
