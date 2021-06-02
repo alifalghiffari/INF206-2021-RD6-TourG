@@ -17,26 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('utama', function () {
+Route::get('/utama', function () {
     return view('home');
 });
 
-Route::get('/menu', function () {
-    return view('menu');
-});
-
-Route::get('/aktivitas', function () {
-    return view('aktivitas');
-});
-
-Route::get('/pemberitahuan', function () {
-    return view('pemberitahuan');
-});
-
-Route::get('/permainan', function () {
-    return view('permainan');
+Route::get('/profil', function () {
+    return view('profil');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/aktivitas', [App\Http\Controllers\AktivitasController::class, 'index'])->name('aktivitas');
+Route::get('/pemberitahuan', [App\Http\Controllers\PemberitahuanController::class, 'index'])->name('pemberitahuan');
+Route::get('/menu', [App\Http\Controllers\PermainanController::class, 'index'])->name('menu');
+Route::get('/menu/permainan', [App\Http\Controllers\PermainanController::class, 'utama'])->name('utama');
