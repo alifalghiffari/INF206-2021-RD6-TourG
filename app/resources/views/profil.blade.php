@@ -23,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('/') }}">Home</a>
+        <a class="nav-link active" aria-current="page" href="{{ url('utama') }}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('/aktivitas') }}">Aktivitas</a>
@@ -58,12 +58,12 @@
     <h5 class="card-title">PROFIL</h5>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nama     :               </li>
-    <li class="list-group-item">Hobi     :               </li>
-    <li class="list-group-item">Email    :               </li>
-    <li class="list-group-item">Nik      :               </li>
-    <li class="list-group-item">Gampong  :               </li>
-    <li class="list-group-item">Kode Pos :               </li>
+    <li class="list-group-item">Nama     :{{ Auth::user()->name }}</li>
+    <li class="list-group-item">Hobi     :{{ Auth::user()->hobi }}</li>
+    <li class="list-group-item">Email    :{{ Auth::user()->email }}</li>
+    <li class="list-group-item">Nik      :{{ Auth::user()->nik }}</li>
+    <li class="list-group-item">Gampong  :{{ Auth::user()->gampong }}</li>
+    <li class="list-group-item">Kode Pos :{{ Auth::user()->kode_pos }}</li>
   </ul>
 </div>
 </div>
