@@ -12,17 +12,12 @@ class PermainanController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         return view('menu');
     }
 
-    public function utama()
+    public function permainan()
     {
         return view('permainan');
     }
