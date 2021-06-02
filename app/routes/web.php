@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
+});
+
+Route::get('utama', function () {
+    return view('home');
 });
 
 Route::get('/menu', function () {
@@ -26,42 +30,13 @@ Route::get('/aktivitas', function () {
 });
 
 Route::get('/pemberitahuan', function () {
-    return view('Pemberitahuan');
+    return view('pemberitahuan');
 });
 
 Route::get('/permainan', function () {
     return view('permainan');
 });
 
-Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
-Route::post('proses_login','App\Http\Controllers\AuthController@proses_login')->name('proses_login');
-Route::get('logout','App\Http\Controllers\AuthController@logout')->name('logout');
-// auth
-// auth -> admin || editor
+Auth::routes();
 
-Route::group(['middleware' => ['auth']],function (){
-    Route::group(['middleware'=> ['cek_login:admin']],function(){
-        Route::get('admin','App\Http\Controllers\AdminController@index')->name('admin');
-    });
-
-    Route::group(['middleware'=> ['cek_login:user']],function(){
-        Route::get('user','App\Http\Controllers\UserController@index')->name('user');
-    });
-
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/batal', function () {
-    return view('batal');
-});\
-
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
