@@ -22,6 +22,6 @@ class CekLevel
             return $next($request);
         }
 
-        return redirect('/welcome');
+        return redirect('/');
     }
 }
